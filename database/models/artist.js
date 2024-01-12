@@ -8,6 +8,7 @@ const Schema = mongoose.Schema;
 const ArtistSchema = new Schema({
   name: {
     type: String,
+    text: true,
   },
   age: {
     type: Number,
