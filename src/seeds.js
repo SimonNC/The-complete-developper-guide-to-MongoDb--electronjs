@@ -1,10 +1,11 @@
+/* eslint-disable quotes */
 import _ from "lodash";
 import faker from "faker";
 import { MongoClient } from "mongodb";
 import { GENRES } from "./constants";
 
-const MINIMUM_ARTISTS = 2;
-const ARTISTS_TO_ADD = 15;
+const MINIMUM_ARTISTS = 200;
+const ARTISTS_TO_ADD = 15000;
 
 let artistsCollection;
 
@@ -35,7 +36,7 @@ function createArtist() {
     name: faker.name.findName(),
     age: randomBetween(15, 45),
     yearsActive: randomBetween(0, 15),
-    image: getArtistImage(),
+    // image: getArtistImage(),
     genre: getGenre(),
     website: faker.internet.url(),
     netWorth: randomBetween(0, 5000000),
